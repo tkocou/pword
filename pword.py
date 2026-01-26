@@ -1,6 +1,11 @@
 #1 /bin/python
 
 ## Copyright 2026 Thomas Kocourek
+##
+## ChangeLog
+##
+## 25jan2026 - initial upload
+## 26jan2026 - added more extensive error checking
 
 ## password generator using normal words randomly selected
 ## to create a long, easier to remember password phrase
@@ -25,21 +30,36 @@ from tkinter import messagebox as mb
 
 
 command = ""
-shuf_command = "shuf"
+
+## depending on your OS file structure, you may need to update the next two lines
+shuf_command = "/usr/bin/shuf"
 word_library = "/usr/share/dict/words"
+
 program_name =  "pword"
+
 default_number_of_words = '4' ## a string representation of an positive Integer
 minimum_words = '3' ## ditto
 maximum_words = '6' ## ditto
 
 def create_pw(number_of_words):
+    ## Let's see if there are missing files
+    flag = False
+    if not os.path.isfile(word_library):
+        flag = True
+    if not os.access(shuf_command,os.X_OK):
+        flag = True
+
+    ## check if either file is missing
+    if flag:
+        mb.showwarning("Warning","'shuf' and/or the 'word' list are missing.\n Please install the missing files.\n")
+        sys.exit()
+
     try: 
         command = shuf_command+ " --random-source=/dev/urandom -n "+str(number_of_words)+" "+word_library+" > temp.txt"
         os.system(command)
 
     except Exception as es:
-        print(f"Has 'shuf' been installed? Error code is =-> {es}")
-        x = input("Press ENTER to terminate.")
+        mb.showwarning("Warning","Has 'shuf' or a 'word' list been installed?\n")
         sys.exit()
 
     with open("temp.txt") as fd:
