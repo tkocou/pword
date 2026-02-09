@@ -9,3 +9,4 @@ Written for Linux. Probably can run on MacOS and Windows systems with some alter
 
 25Jan2026 - Initial upload
 26Jan2026 - Added more error checking
+08Feb2026 - Finally got pword working on Windows 11. Executable is available for download.
