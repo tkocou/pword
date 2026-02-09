@@ -6,6 +6,7 @@
 ##
 ## 25jan2026 - initial upload
 ## 26jan2026 - added more extensive error checking
+## 08feb2026 - Got pword working on Windows 11. Executable available for download.
 
 ## password generator using normal words randomly selected
 ## to create a long, easier to remember password phrase
