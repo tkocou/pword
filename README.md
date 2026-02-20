@@ -3,7 +3,7 @@ Pass Phrase generator
 
 This Python project is a tkinter GUI app for local use on any system with the prerequisite programs.
 
-Written for Linux. Probably can run on MacOS and Windows systems with some alterations.
+Written for Linux. Probably can run on MacOS systems with some alterations. A Windows 11 executable is available for download.
 
 > ChangeLog < (also in program heading)
 
