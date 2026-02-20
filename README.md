@@ -1,7 +1,7 @@
 # pword
 Pass Phrase generator
 
-This Python project is a GUI app for local use on any system with the prerequisite programs.
+This Python project is a tkinter GUI app for local use on any system with the prerequisite programs.
 
 Written for Linux. Probably can run on MacOS and Windows systems with some alterations.
 
@@ -12,3 +12,4 @@ Written for Linux. Probably can run on MacOS and Windows systems with some alter
 26Jan2026 - Added more error checking
 
 08Feb2026 - Finally got pword working on Windows 11. Executable is available for download.
+
