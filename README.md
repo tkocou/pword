@@ -5,6 +5,8 @@ This Python project is a tkinter GUI app for local use on any system with the pr
 
 Written for Linux. Probably can run on MacOS systems with some alterations. A Windows 11 executable is available for download.
 
+The Windows executable will need the 'words.txt' file downloaded and stored in the Documents directory.
+
 > ChangeLog < (also in program heading)
 
 25Jan2026 - Initial upload
